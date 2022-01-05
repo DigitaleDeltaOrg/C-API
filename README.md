@@ -4,7 +4,7 @@
 
 In the world of measurements many standards and software-specific interfaces exist, suited for specific circumstances.
 
-To name a few in the water-world:
+To name a few in the water domain-world:
 
 * [DD-API](https://github.com/DigitaleDeltaOrg/dd-api) for time series-based measurements
 * [DD-ECO-API](https://github.com/DigitaleDeltaOrg/dd-eco-api) for observation-based measurements
@@ -21,9 +21,9 @@ The C-API attempts to provide a means to that end.
 In our connected world, the data from these diverse systems needs to be combined to be able to produce meaningful data.
 
 But combining the data from these systems is not a trivial task. The systems have different query interfaces, different naming conventions, different export formats, etc. Some provide data in smaller sections (paging).
-Manually combining the data is error-prone, and since decisions may be made based on that data, potentially harmful.
+Manually combining the data is error-prone, and since decisions may be made based on that data, this can potentially be harmful.
 
-The C-API attempts to make gathering the data more... convenient. It does that by providing a single, but flexible query format and export format.
+The C-API attempts to conveniently simplify the gathering process. It does that by providing a single, but flexible query format and export format.
 
 It has a plug-in architecture that allows additional data-sources to be added. The plug-ins take care of querying the data source using a standardised query format and returning the data in the standardised export format.
 
@@ -45,10 +45,10 @@ As this is a specification and the language used in specifications matter, here 
 
 
 | this...     | means...                        |
-| ------------- | --------------------------------- |
+| ------------- |---------------------------------|
 | must, shall | it is required                  |
 | should      | it is recommended, but optional |
-| could       | it suggested, so optional       |
+| could       | it is suggested, so optional    |
 
 On to the architecture...
 
@@ -88,14 +88,15 @@ All plug-ins (and the core) have OAS 3.x definitions. The Connector and the plug
 The C-API does ***not*** define the following:
 
 - If and how configuration is managed or stored
-- If and how temporary results from plug-ins is stored
+- If and how temporary results from plug-ins are stored
 - How the components are to be implemented
 - Managing SourceDefinition
 - Provide a UI for the Connector
 
 These topics are not platform-agnostic. as it depends on the storage facility of the organisation designing the connector (database, flat-storage. memory), how configuration should be handled (organisation-specific requirements) or how (if desired) a user interface is presented (technology, specific group-requirements).
 
-For demo purposes, a simple, yet useful [Connector](/architecture/connector.md) with plug-ins for [DD-API](https://github.com/DigitaleDeltaOrg/dd-api), [DD-ECO-API](https://github.com/DigitaleDeltaOrg/dd-eco-api) and [Z-INFO](https://www.hetwaterschapshuis.nl/z-info) are available at [https://c-api-connector.ecosys.nl](https://c-api-connector-demi.ecosys.nl).
+For demo purposes, a simple, yet useful [Connector](/architecture/connector.md) with plug-ins for [DD-API](https://github.com/DigitaleDeltaOrg/dd-api), [DD-ECO-API](https://github.com/DigitaleDeltaOrg/dd-eco-api) and [Z-INFO](https://www.hetwaterschapshuis.nl/z-info) 
+are available at [https://c-api-connector.ecosys.nl](https://c-api-connector-demo.ecosys.nl).
 If you wish to have your own [plug-in](/architecture/plug-in.md) show-cased on the demo site, please contact [geri.wolters@ecosys.nl](mailto://geri.wolters@ecosys.nl).
 
 ## History
@@ -151,7 +152,7 @@ Big thanks go to the following organisations:
 
 [Hoogheemraadschap Hollands Noorderkwartier](https://www.hhnk.nl) for providing ecological and chemical data of their organisation through DD-ECO-API.
 
-[Informatiehuis Water](https://www.ihw.nl) for willing to govern this project.
+[Informatiehuis Water](https://www.ihw.nl) for their willingness to govern this project.
 
 ## Project members
 
