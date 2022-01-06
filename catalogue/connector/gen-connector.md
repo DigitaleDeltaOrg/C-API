@@ -1,0 +1,1 @@
+# Generic connector (Proof of concept)

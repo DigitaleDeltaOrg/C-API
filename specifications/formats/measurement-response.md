@@ -1,6 +1,6 @@
-﻿# ResponseCache
+﻿# MeasurementResponse
 
-ResponseCache is sent back to the Connector by the Plug-in. The ResponseId field must match the ResponseId sent to the plug-in by the Connector.
+MeasurementResponse is sent back to the [Connector](/architecture/connector.md) by the [Plug-in](/architecture/plug-in.md). The ResponseId field must match the ResponseId sent to the [Plug-in](/architecture/plug-in.md) by the [Connector](/architecture/connector.md).
 
 ```json
 {

@@ -1,0 +1,1 @@
+# Generic DD-ECO-API plugin (Proof of concept)

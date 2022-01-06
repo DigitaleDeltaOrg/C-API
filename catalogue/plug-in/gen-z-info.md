@@ -1,0 +1,1 @@
+# Generic Z-INFO plugin (Proof of concept)

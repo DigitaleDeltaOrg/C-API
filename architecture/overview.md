@@ -9,7 +9,7 @@ To avoid differences in interpretations, this specification uses some definition
 - [Connector](/architecture/connector.md): an active component that interacts with Consumer
 - [Plug-in](/architecture/plug-in.md): an active components that gathers data from a data source and translates that data back to a standardised format
 
-Also see [data categories](/specifications/formats/data-categories.md).
+Also see [data categories](/specifications/formats/data-category.md).
 
 ## Architecture
 

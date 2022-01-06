@@ -1,0 +1,1 @@
+# Generic DD-API plugin (Proof of concept)
