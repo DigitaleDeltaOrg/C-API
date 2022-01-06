@@ -4,6 +4,14 @@ The Connector defines what it offers the consumer as query capabilities. Capabil
 
 A capability consists of a field name, a [DataCategory](/specifications/formats/data-category.md)  and [QueryType](/specifications/formats/query-type.md).
 
+## Properties
+| Name         | Type                                               | Remarks                                                                          |
+|--------------|----------------------------------------------------|----------------------------------------------------------------------------------|
+| FieldName    | [StringType](/specifications/formats/data-type.md) | Name of the field                                                                |
+| DataCategory | [StringType](/specifications/formats/data-type.md) | One of the values in [data categories](/specifications/formats/data-category.md) |
+| QueryType    | [StringType](/specifications/formats/data-type.md) | One of the values in [query types](/specifications/formats/query-type.md)        |
+
+
 ```json
 {
   "ConnectorCapabilities": [

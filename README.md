@@ -5,14 +5,14 @@ It is not a standard that surpasses all previous standards, but is a mechanism t
 
 This document is divided in several sections, to make it easier to navigate to the section of interest.
 
-- [Introduction](/introduction.md)
-- [What is the C-API](/what-is-c-api.md)
-- [Definitions](/definitions.md)
+- [Introduction](/general/introduction.md)
+- [What is the C-API](/general/what-is-c-api.md)
+- [Definitions](/general/definitions.md)
 - [Architecture of the C-API](/architecture/architecture.md)
 - [Specifications](/specifications/specifications.md)
-- [History](/history.md)
-- [Community](/community.md)
+- [History](/general/history.md)
+- [Community](/general/community.md)
 - [Catalogue](/catalogue/catalogue.md)
-- [Project members](/project-members.md)
-- [Contributors](/contributors)
+- [Project members](/general/project-members.md)
+- [Contributors](/general/contributors)
 

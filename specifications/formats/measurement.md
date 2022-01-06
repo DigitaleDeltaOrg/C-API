@@ -1,16 +1,18 @@
 ﻿# Measurement
 A measurement consists of data from a (converted) observation.
 
-Required:
-- Quantity
-- MeasurementObject
-- MeasurementDate
-- Value
+## Properties
+| Name              | Type                                                | Remarks     |
+|-------------------|-----------------------------------------------------|-------------|
+| Quantity          | [StringType](/specifications/formats/data-type.md)  |             |
+| MeasurementObject | [StringType](/specifications/formats/data-type.md)  |             |
+| MeasurementDate   | [DateType](/specifications/formats/data-type.md)    |             |
+| Value             | [NumericType](/specifications/formats/data-type.md) |             |
+| Coordinates       | [GeoJSON](https://geojson.org)                      | Recommended |
+| Compartment       | [StringType](/specifications/formats/data-type.md)  | Recommended |
+| Unit              | [StringType](/specifications/formats/data-type.md)  | Recommended |
+| AdditionalData    | Dictionary of key-value pairs                       | Recommended |
 
-Coordinates are expressed in GeoJSON. The default coordinate system for GeoJSON is WGS84.
-The GeoJSON standard specifically states that there is no standard method to convey other coordinate systems.
-The parties involved have to decide themselves how to handle it.
-One method to add a property that specifies the coordinate system to use.
 
 In [AQUO](https://www.aquo.nl), when a unit is not specified, the value DIMSLS (dimensionless) is required.
 

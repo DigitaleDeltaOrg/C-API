@@ -20,7 +20,7 @@ The Plug-in must implement the following endpoints and respond accordingly:
 | /measurementobjects | Data discovery       | -                                                | Simple JSON array of [Compartment](/specifications/formats/compartment.md)s |
 | /quantities         | Data discovery       | -                                                | Simple JSON array of [Quantity](/specifications/formats/quantity.md)s       |
 | /units              | Data discovery       | -                                                | Simple JSON array of [Unit](/specifications/formats/unit.md)s               |
-| /measurements       | Measurements         | [DataBody](/specifications/formats/data-body.md) | [ResponseCache](/specifications/formats/measurement-response.md)            |
+| /measurements       | Measurements         | [DataBody](/specifications/formats/data-body.md) | [MeasurementResponse](/specifications/formats/measurement-response.md)      |
 
 ## Responsibilities
 
@@ -42,4 +42,4 @@ The responsibilities of the plug-in are:
 
 The following functionality should be provided:
 
-- Handle statistics ([ResponseCache](/specifications/formats/measurement-response.md)).
+- Handle statistics ([MeasurementResponse](/specifications/formats/measurement-response.md)).

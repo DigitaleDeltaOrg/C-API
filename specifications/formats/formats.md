@@ -24,3 +24,6 @@ The following formats are defined:
 | Structure of a source                                       | [source](source.md)                             | 
 | Structure of a source definition                            | [source-definition](source-definition.md)       | 
 | Structure of units                                          | [unit](unit.md)                                 | 
+| Statistics                                                  | [statistics](statistics.md)]                    |
+
+Note: Alle fields are required, unless specified otherwise.

@@ -1,10 +1,9 @@
-﻿# Measurement object
+﻿# Measurement object (location)
 
-- Code
-- Name
-- Geometry
-- Source
-
-For [plug-in](/architecture/plug-in.md)s, the value for Source has to be set by the [plug-in](/architecture/plug-in.md) obtained from the [Connector](/architecture/connector.md)'s [SourceDefinition](/specifications/formats/source-definition.md) request as part of the [DataBody](/specifications/formats/data-body.md).
-
-Geometry is optional. When specified, it contains a GeoJSON representation of the measurement object.
+## Properties
+| Name     | Type                                               | Remarks                                                                       |
+|----------|----------------------------------------------------|-------------------------------------------------------------------------------|
+| Code     | [StringType](/specifications/formats/data-type.md) | Code of the measurement object                                                |
+| Name     | [StringType](/specifications/formats/data-type.md) | Name (or description) of the measurement object                               |
+| Geometry | [GeoJSON](https://geojson.org)                     | Name (or description) of the measurement object (recommended)                 |
+| Source   | [StringType](/specifications/formats/data-type.md) | Code of the source as provided by the [Connector](/architecture/connector.md) |

@@ -1,9 +1,8 @@
 ﻿# Quantity
 
-- Code
-- Name
-- Source
-
-For [plug-in](/architecture/plug-in.md)s, the value for Source has to be set by the [plug-in](/architecture/plug-in.md) obtained from the [Connector](/architecture/connector.md)'s [SourceDefinition](/specifications/formats/source-definition.md) request as part of the [DataBody](/specifications/formats/data-body.md).
-
-All properties are strings.
+## Properties
+| Name   | Type                                               | Remarks                                                                       |
+|--------|----------------------------------------------------|-------------------------------------------------------------------------------|
+| Code   | [StringType](/specifications/formats/data-type.md) | Code of the quantity                                                          |
+| Name   | [StringType](/specifications/formats/data-type.md) | Name (or description) of the quantity                                         |
+| Source | [StringType](/specifications/formats/data-type.md) | Code of the source as provided by the [Connector](/architecture/connector.md) |

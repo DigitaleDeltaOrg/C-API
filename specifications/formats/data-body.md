@@ -4,6 +4,15 @@ The DataBody contains all information send to the plug-in: the query, the mappin
 
 It has the following structure:
 
+## Properties
+| Name                  | Type                                                                            | Remarks                                                                                                                                                    |
+|-----------------------|---------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| SourceDefinition      | [SourceDefinition](/specifications/formats/source-definition.md)                | Describes data for the Source                                                                                                                              |
+| Conditions            | Array of [Condition](/specifications/formats/condition.md)                      | Describes the filter                                                                                                                                       |
+| ConnectorCapabilities | Array of [ConnectorCapability](/specifications/formats/connector-capability.md) | Describes the capabilities that the [connector](/architecture/connector.md) knows                                                                          |
+| ResponseId            | [StringType](/specifications/formats/data-type.md)                              | Identifier that the [plug-in](/architecture/plug-in.md) must return as part of the [measurement response](/specifications/formats/measurement-response.md) |
+
+
 ```json
 {
   "SourceDefinition": {},
@@ -12,7 +21,3 @@ It has the following structure:
   "ResponseId": ""
 }
 ```
-
-The definitions of [SourceDefinition](/specifications/formats/source-definition.md), [Conditions](/specifications/formats/condition.md) and [ConnectorCapabilities](/specifications/formats/connector-capability.md) can be found in their own sections.
-ResponseId is a value passed by the Connector, to keep track of which request produced which response.
-It is required that the plug-in returns the ResponseId to the Connector as part of the ResponseCache.

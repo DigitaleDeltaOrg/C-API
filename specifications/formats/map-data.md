@@ -1,18 +1,20 @@
 ﻿# MapData
 
-Mapping data is passed as an array of MapData elements from the Connector to the Plug-in:
+Mapping data is passed as an array of MapData elements from the [Connector](/architecture/connector.md) to the [Plug-in](/architecture/plug-in.md):
 
 A map data element consists of four fields:
 
-CApiDataCategory is a [DataCategory](/specifications/formats/data-category.md) according to the C-API.
+## Properties
+| Name               | Type                                               | Remarks                                                                                                                       |
+|--------------------|----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| CApiDataCategory   | [StringType](/specifications/formats/data-type.md) | Name of the [data category](/specifications/formats/data-category.md) as known by the [Connector](/architecture/connector.md) | 
+| CApiName           | [StringType](/specifications/formats/data-type.md) | Value as  known by the [Connector](/architecture/connector.md)                                                                |  
+| SourceDataCategory | [StringType](/specifications/formats/data-type.md) | Name of the [data category](/specifications/formats/data-category.md) as known by the [Plug-in](/architecture/plug-in.md)     | 
+| SourceName         | [StringType](/specifications/formats/data-type.md) | Value as known by the [Plug-in](/architecture/plug-in.md)                                                                     |
 
-CApiName is the name of the item according to the C-API.
 
-SourceDataCategory is a [DataCategory](/specifications/formats/data-category.md) according to the data source.
-
-SourceName is the name of the item according to the data source.
-
-Using this, the combination of CApiDataCategory+CApiName can be mapped to SourceDataCategory+SourceName and vice versa.
+The combination CApiDataCategory+CApiName must be mapped to SourceDataCategory+SourceName and vice versa.
+Unknown combinations are left untouched (unmapped).
 
 ```json
 {

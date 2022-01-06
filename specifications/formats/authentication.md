@@ -10,6 +10,8 @@ To allow some kind of authentication, the C-API allows the following methods:
 Authentication information is passed from the [Connector](/architecture/connector.md) to the [Plug-in](/architecture/plug-in.md). 
 The data for the different OAUTH2 flows conform to the [Identity Model definition](https://identitymodel.readthedocs.io/en/latest/)
 
+All properties are [StringType](/specifications/formats/data-type.md#data-types).
+
 ## API-keys
 ```json
 { 
@@ -71,7 +73,6 @@ The data for the different OAUTH2 flows conform to the [Identity Model definitio
   }
 }
 ```
-
 
 ## OAUTH2 authorization flow
 ```json
