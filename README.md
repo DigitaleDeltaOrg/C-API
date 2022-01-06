@@ -4,24 +4,25 @@
 
 In the world of measurements many standards and software-specific interfaces exist, suited for specific circumstances.
 
-To name a few in the water domain-world:
+To name a few in the water domain-world in the Netherlands:
 
-* [DD-API](https://github.com/DigitaleDeltaOrg/dd-api) for time series-based measurements
+* [DD-API](https://github.com/DigitaleDeltaOrg/dd-api) for timeseries-based measurements
 * [DD-ECO-API](https://github.com/DigitaleDeltaOrg/dd-eco-api) for observation-based measurements
 * [Z-INFO](https://www.hetwaterschapshuis.nl/z-info) for waste-water management, also observation-based
 
-These systems are connected in some form, and this means that the data from these systems, are connected as well.
+These standards and systems allow retrieval of measurement data in some form.
 
-One of the challenges is how to combine data from these disparate systems.
+Timeseries-based measurements are used in (mostly) automated measurement systems.
+Observation-based measurements are used in situations where the measurements are not performed with fixed time intervals, or where measurements need extra steps, i.e. laboratory situations.
 
-The C-API attempts to provide a means to that end.
-
-## C-API
-
+These systems deal with water-management in some form.
 In our connected world, the data from these diverse systems needs to be combined to be able to produce meaningful data.
 
 But combining the data from these systems is not a trivial task. The systems have different query interfaces, different naming conventions, different export formats, etc. Some provide data in smaller sections (paging).
 Manually combining the data is error-prone, and since decisions may be made based on that data, this can potentially be harmful.
+
+
+## C-API
 
 The C-API attempts to conveniently simplify the gathering process. It does that by providing a single, but flexible query format and export format.
 
@@ -33,7 +34,7 @@ First some definitions used in this specification:
 
 
 | Definition                                                        | Description                                                                                                      |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+|-------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | [Consumer](/architecture/consumer.md)                             | the person or system requesting data                                                                             |
 | [Provider](/architecture/provider.md)                             | system offering one or more components of this specification                                                     |
 | [Data source](/architecture/data-source.md)                       | container for measurement data                                                                                   |
@@ -45,7 +46,7 @@ As this is a specification and the language used in specifications matter, here 
 
 
 | this...     | means...                        |
-| ------------- |---------------------------------|
+|-------------|---------------------------------|
 | must, shall | it is required                  |
 | should      | it is recommended, but optional |
 | could       | it is suggested, so optional    |
@@ -81,27 +82,31 @@ The C-API is a specification. It defined how components are to behave and what m
 To simplify implementation and not to define what language or platform is required **and** allow as much flexibility as possible, only HTTP and JSON are used in the specification.
 
 However, sample implementations are provided for the [Connector](/architecture/connector.md) and
-[Plug-in](/architecture/plug-in.md)s for the DD-API, the DD-ECO-API and [Z-INFO](https://www.hetwaterschapshuis.nl/z-info), as a proof of concept, in a [separate source repository](https://github.com/DigitaleDeltaOrg/C-API-poc-dotnet). The examples are in C# 10/.NET 6. Porting the code to other platforms and languages should not be a difficult task.
+[Plug-in](/architecture/plug-in.md)s for the  [DD-API](https://github.com/DigitaleDeltaOrg/dd-api), the [DD-ECO-API](https://github.com/DigitaleDeltaOrg/dd-eco-api) and [Z-INFO](https://www.hetwaterschapshuis.nl/z-info), as a proof of concept, in a [separate source repository](https://github.com/DigitaleDeltaOrg/C-API-poc-dotnet). 
+The examples are in [C# 10](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-10) / [.NET 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0). The code is therefor already largely OS independent. 
+Porting the code to other platforms and languages should not be a difficult task.
 
-All plug-ins (and the core) have OAS 3.x definitions. The Connector and the plug-ins communicate exclusively by means of HTTP(S) and JSON. The messages are standardised.
+All [Plug-in](/architecture/plug-in.md)s (and the core) have [OAS 3.x](https://www.openapis.org) definitions. 
+These are located [here](/open-api-definitions/index.md). 
+
+The [Connector](/architecture/connector.md) and the [Plug-in](/architecture/plug-in.md)s communicate exclusively by means of HTTP(S) and JSON. The messages are standardised.
 
 The C-API does ***not*** define the following:
 
 - If and how configuration is managed or stored
-- If and how temporary results from plug-ins are stored
+- If and how temporary results from [plug-in](/architecture/plug-in.md)s are stored
 - How the components are to be implemented
-- Managing SourceDefinition
+- Managing [SourceDefinition](/specifications/formats/source-definition.md)
 - Provide a UI for the Connector
 
 These topics are not platform-agnostic. as it depends on the storage facility of the organisation designing the connector (database, flat-storage. memory), how configuration should be handled (organisation-specific requirements) or how (if desired) a user interface is presented (technology, specific group-requirements).
 
-For demo purposes, a simple, yet useful [Connector](/architecture/connector.md) with plug-ins for [DD-API](https://github.com/DigitaleDeltaOrg/dd-api), [DD-ECO-API](https://github.com/DigitaleDeltaOrg/dd-eco-api) and [Z-INFO](https://www.hetwaterschapshuis.nl/z-info) 
-are available at [https://c-api-connector.ecosys.nl](https://c-api-connector-demo.ecosys.nl).
+For demo purposes, a simple, yet useful [Connector](/architecture/connector.md) with plug-ins for [DD-API](https://github.com/DigitaleDeltaOrg/dd-api), [DD-ECO-API](https://github.com/DigitaleDeltaOrg/dd-eco-api) and [Z-INFO](https://www.hetwaterschapshuis.nl/z-info)are available at [https://c-api-connector.ecosys.nl](https://c-api-connector-demo.ecosys.nl).
 If you wish to have your own [plug-in](/architecture/plug-in.md) show-cased on the demo site, please contact [geri.wolters@ecosys.nl](mailto://geri.wolters@ecosys.nl).
 
 ## History
 
-The C-API is a brain child of Johannes Meerding of [Hoogheemraadschap van Delfland](https://www.hhdelfland.nl) (HvD), to attempt to combine measurements from different sources.
+The C-API is the brain child of Johannes Meerding of [Hoogheemraadschap van Delfland](https://www.hhdelfland.nl) (HvD), to attempt to combine measurements from different sources.
 
 Faced by the fact that different systems had different interfaces, different query languages and different formats, and some systems did not even provide a method to export data for data analysis, he started this project.
 
