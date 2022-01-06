@@ -1,5 +1,7 @@
 ﻿# Compartment
 
+Defines in what part of the [MeasurementObject](/specifications/formats/measurement-object.md) the sampling was performed.
+
 ## Properties
 | Name   | Type                                               | Remarks                                                                       |
 |--------|----------------------------------------------------|-------------------------------------------------------------------------------|

@@ -12,7 +12,19 @@ The responsibility for that section is with the [Plug-in](/architecture/plug-in.
 However, it is advised to share the specifications in a catalogue.
 
 It conveys configuration information to a [Plug-in](/architecture/plug-in.md). 
-Fixed elements are: [MapData](/specifications/formats/map-data.md), [AuthenticationData](/specifications/formats/authentication.md).
+
+## Properties
+| Name | Type                                               | Remarks                                                                       |
+|--|----------------------------------------------------|-------------------------------------------------------------------------------|
+| Id | [StringType](/specifications/formats/data-type.md) | Id of the [Source](/architecture/data-source.md)                                               |
+| Name | [StringType](/specifications/formats/data-type.md) | Name of the [Source](/architecture/data-source.md)                                |
+| Code | [StringType](/specifications/formats/data-type.md) | Code of the [Source](/architecture/data-source.md)  |
+| Plugin | [StringType](/specifications/formats/data-type.md) | Type of the [Plug-in](/architecture/plug-in.md)  |
+| Url | [StringType](/specifications/formats/data-type.md) | HTTPS address of the [Plug-in](/architecture/plug-in.md)  |
+| AuthenticationData | [AuthenticationData](/specifications/formats/authentication.md) | Information required for the [Plug-in](/architecture/plug-in.md) to [authenticate](/specifications/formats/authentication.md) |
+| MapData | [MapData](/specifications/formats/map-data.md) | Information required to map data between [Connector](/architecture/connector.md) and [Plug-in](/architecture/plug-in.md) |
+
+
 It can also specify [Plug-in](/architecture/plug-in.md) specific sections. In the example below, DdApiConfigurationSection contains such information.
 
 ```json

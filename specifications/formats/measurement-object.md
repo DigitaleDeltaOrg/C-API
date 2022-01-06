@@ -1,5 +1,7 @@
 ﻿# Measurement object (location)
 
+Defines the subject under test.
+
 ## Properties
 | Name     | Type                                               | Remarks                                                                       |
 |----------|----------------------------------------------------|-------------------------------------------------------------------------------|

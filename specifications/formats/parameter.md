@@ -1,5 +1,7 @@
 ﻿# Parameter
 
+A parameter specifies on what was measured. A parameter can be absent when [Quantity](/specifications/formats/quantity.md) is sufficiently specific and identifying. 
+
 ## Properties
 | Name   | Type                                               | Remarks                                                                       |
 |--------|----------------------------------------------------|-------------------------------------------------------------------------------|

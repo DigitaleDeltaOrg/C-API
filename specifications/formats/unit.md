@@ -1,5 +1,7 @@
 ﻿# Unit
 
+Units define the unit-of-measurement in which the measured value was expressed. 
+
 ## Properties
 | Name   | Type                                               | Remarks                                                                       |
 |--------|----------------------------------------------------|-------------------------------------------------------------------------------|

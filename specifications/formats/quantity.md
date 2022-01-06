@@ -1,5 +1,7 @@
 ﻿# Quantity
 
+A quantity defines what aspect was measured from an observation or timeseries.
+
 ## Properties
 | Name   | Type                                               | Remarks                                                                       |
 |--------|----------------------------------------------------|-------------------------------------------------------------------------------|
