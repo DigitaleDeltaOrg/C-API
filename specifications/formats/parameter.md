@@ -1,6 +1,9 @@
 ﻿# Parameter
 
-A parameter specifies on what was measured. A parameter can be absent when [Quantity](/specifications/formats/quantity.md) is sufficiently specific and identifying. 
+Parameters define the state of a system.
+
+- A chemical (or a substance group): the quantity of which determines a state of the system.
+- An organism (bio-taxon) or a group of organisms whose occurrence or non-occurrence determines a state of the system.
 
 ## Properties
 | Name   | Type                                               | Remarks                                                                       |
