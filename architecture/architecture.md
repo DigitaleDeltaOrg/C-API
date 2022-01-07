@@ -67,12 +67,11 @@ During the project, with DD-API, DD-ECO-API and Z-INFO, several issues came up:
 
 The C-API does ***not*** define the following:
 
-If and how temporary results from plug-ins is stored
-
-- How the components are to be implemented
-- Managing, configuring and storing [SourceDefinition](/specifications/formats/source-definition.md)
-- Provide a UI for the [Connector](/architecture/connector.md)
-- What Consumer can access the [Connector](/architecture/connector.md) and how
+- If or how temporary results from plug-ins are to be stored
+- How the components are to be implemented, what language, framework, platform or operating system
+- How to manage, configure or store [SourceDefinition](/specifications/formats/source-definition.md)
+- If or how to implement the UI for the [Connector](/architecture/connector.md)
+- What and how a [Consumer](/architecture/consumer.md) can access the [Connector](/architecture/connector.md)
 
 These topics are left to the implementors of the [Connector](/architecture/connector.md) and [plug-in](/architecture/plug-in.md)s, or organisations implementing the C-API definitions. These topics are considered outside the scope of the C-API specification.
 
