@@ -7,16 +7,16 @@ The Connector is the component that response to a consumer's query, communicate 
 The Connector must implement the following endpoints and respond accordingly:
 
 ### End-points table
-| End-point           | Type                 | Request                                                | Response                                                                                      |
-|---------------------|----------------------|--------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| /sources            | Functional discovery | -                                                      | Simple JSON array of [Source](/specifications/formats/source.md)s                             |
-| /capabilities       | Functional discovery | -                                                      | Simple JSON array of [Connector capability](/specifications/formats/connector-capability.md)s |
-| /compartments       | Data discovery       | -                                                      | Simple JSON array of [Compartment](/specifications/formats/compartment.md)s                   |
-| /parameter          | Data discovery       | -                                                      | Simple JSON array of [Parameter](/specifications/formats/parameter.md)s                       |
-| /measurementobjects | Data discovery       | -                                                      | Simple JSON array of [Compartment](/specifications/formats/compartment.md)s                   |
-| /quantities         | Data discovery       | -                                                      | Simple JSON array of [Quantity](/specifications/formats/quantity.md)s                         |
-| /units              | Data discovery       | -                                                      | Simple JSON array of [Unit](/specifications/formats/unit.md)s                                 |
-| /measurements       | Measurements         | [Measurements](/specifications/formats/measurement.md) | Simple JSON array of [Measurement](/specifications/formats/measurement.md)s                   |
+| End-point           | Type                 | Request                                                | Parameters                                                                                                    | Response                                                                                       |
+|---------------------|----------------------|--------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| /sources            | Functional discovery | -                                                      | [sources](/specifications/formats/source-parameter.md), [filter](/specifications/formats/filter-parameter.md) | Simple JSON array of  [Source](/specifications/formats/source.md)s                             |
+| /capabilities       | Functional discovery | -                                                      | -                                                                                                             | Simple JSON array of  [Connector capability](/specifications/formats/connector-capability.md)s |
+| /compartments       | Data discovery       | -                                                      | -                                                                                                             | Simple JSON array of  [Compartment](/specifications/formats/compartment.md)s                   |
+| /parameter          | Data discovery       | -                                                      | -                                                                                                             | Simple JSON array of  [Parameter](/specifications/formats/parameter.md)s                       |
+| /measurementobjects | Data discovery       | -                                                      | -                                                                                                             | Simple JSON array of [Compartment](/specifications/formats/compartment.md)s                    |
+| /quantities         | Data discovery       | -                                                      | -                                                                                                             | Simple JSON array of  [Quantity](/specifications/formats/quantity.md)s                         |
+| /units              | Data discovery       | -                                                      | -                                                                                                             | Simple JSON array of  [Unit](/specifications/formats/unit.md)s                                 |
+| /measurements       | Measurements         | [Measurements](/specifications/formats/measurement.md) | -                                                                                                             | Simple JSON array of  [Measurement](/specifications/formats/measurement.md)s                   |
 
 
 ## Responsibilities
