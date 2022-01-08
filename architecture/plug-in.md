@@ -22,6 +22,8 @@ The Plug-in must implement the following endpoints and respond accordingly:
 | /units              | Data discovery       | -                                                | Simple JSON array of [Unit](/specifications/formats/unit.md)s               |
 | /measurements       | Measurements         | [DataBody](/specifications/formats/data-body.md) | [MeasurementResponse](/specifications/formats/measurement-response.md)      |
 
+Specifications are documented in the [OpenAPI specifications page](/open-api-definitions/index.md)
+
 ## Responsibilities
 
 The responsibilities of the plug-in are:

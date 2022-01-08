@@ -18,6 +18,8 @@ The Connector must implement the following endpoints and respond accordingly:
 | /units              | Data discovery       | -                                                      | -                                                                                                             | Simple JSON array of  [Unit](/specifications/formats/unit.md)s                                 |
 | /measurements       | Measurements         | [Measurements](/specifications/formats/measurement.md) | [sources](/specifications/formats/source-parameter.md), [filter](/specifications/formats/filter-parameter.md) | Simple JSON array of  [Measurement](/specifications/formats/measurement.md)s                   |
 
+Specifications are documented in the [OpenAPI specifications page](/open-api-definitions/index.md)
+
 
 ## Responsibilities
 
