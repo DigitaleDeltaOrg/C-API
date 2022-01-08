@@ -7,53 +7,53 @@ A capability consists of a field name, a [DataCategory](/specifications/formats/
 ## Properties
 | Name         | Type                                               | Remarks                                                                          |
 |--------------|----------------------------------------------------|----------------------------------------------------------------------------------|
-| FieldName    | [StringType](/specifications/formats/data-type.md) | Name of the field                                                                |
-| DataCategory | [StringType](/specifications/formats/data-type.md) | One of the values in [data categories](/specifications/formats/data-category.md) |
-| QueryType    | [StringType](/specifications/formats/data-type.md) | One of the values in [query types](/specifications/formats/query-type.md)        |
+| fieldName    | [StringType](/specifications/formats/data-type.md) | Name of the field                                                                |
+| dataCategory | [StringType](/specifications/formats/data-type.md) | One of the values in [data categories](/specifications/formats/data-category.md) |
+| queryType    | [StringType](/specifications/formats/data-type.md) | One of the values in [query types](/specifications/formats/query-type.md)        |
 
 
 ```json
 {
   "ConnectorCapabilities": [
     {
-      "FieldName": "compartment",
-      "DataCategory": "Compartment",
-      "QueryType": "StringExact"
+      "fieldName": "compartment",
+      "dataCategory": "Compartment",
+      "queryType": "StringExact"
     },
     {
-      "FieldName": "parameter",
-      "DataCategory": "Parameter",
-      "QueryType": "StringExact"
+      "fieldName": "parameter",
+      "dataCategory": "Parameter",
+      "queryType": "StringExact"
     },
     {
-      "FieldName": "unit",
-      "DataCategory": "Unit",
-      "QueryType": "StringExact"
+      "fieldName": "unit",
+      "dataCategory": "Unit",
+      "queryType": "StringExact"
     },
     {
-      "FieldName": "compartment",
-      "DataCategory": "Compartment",
-      "QueryType": "StringExact"
+      "fieldName": "compartment",
+      "dataCategory": "Compartment",
+      "queryType": "StringExact"
     },
     {
-      "FieldName": "measurementobject",
-      "DataCategory": "MeasurementObject",
-      "QueryType": "StringWildCard"
+      "fieldName": "measurementobject",
+      "dataCategory": "MeasurementObject",
+      "queryType": "StringWildCard"
     },
     {
-      "FieldName": "quantity",
-      "DataCategory": "Quantity",
-      "QueryType": "StringExact"
+      "fieldName": "quantity",
+      "dataCategory": "Quantity",
+      "queryType": "StringExact"
     },
     {
-      "FieldName": "measurementdate",
-      "DataCategory": "Date",
-      "QueryType": "Date"
+      "fieldName": "measurementdate",
+      "dataCategory": "Date",
+      "queryType": "Date"
     },
     {
-      "FieldName": "value",
-      "DataCategory": "Numeric",
-      "QueryType": "Numeric"
+      "fieldName": "value",
+      "dataCategory": "Numeric",
+      "queryType": "Numeric"
     }
   ]
 }

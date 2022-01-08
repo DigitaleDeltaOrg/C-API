@@ -15,68 +15,66 @@ It conveys configuration information to a [Plug-in](/architecture/plug-in.md).
 
 ## Properties
 | Name | Type                                               | Remarks                                                                       |
-|--|----------------------------------------------------|-------------------------------------------------------------------------------|
-| Id | [StringType](/specifications/formats/data-type.md) | Id of the [Source](/architecture/data-source.md)                                               |
-| Name | [StringType](/specifications/formats/data-type.md) | Name of the [Source](/architecture/data-source.md)                                |
-| Code | [StringType](/specifications/formats/data-type.md) | Code of the [Source](/architecture/data-source.md)  |
-| Plugin | [StringType](/specifications/formats/data-type.md) | Type of the [Plug-in](/architecture/plug-in.md)  |
-| Url | [StringType](/specifications/formats/data-type.md) | HTTPS address of the [Plug-in](/architecture/plug-in.md)  |
-| AuthenticationData | [AuthenticationData](/specifications/formats/authentication.md) | Information required for the [Plug-in](/architecture/plug-in.md) to [authenticate](/specifications/formats/authentication.md) |
-| MapData | [MapData](/specifications/formats/map-data.md) | Information required to map data between [Connector](/architecture/connector.md) and [Plug-in](/architecture/plug-in.md) |
+|--|----------------------------------------------------|-------------------------------------------------------------------------------|)                                               |
+| name | [StringType](/specifications/formats/data-type.md) | Name of the [Source](/architecture/data-source.md)                                |
+| code | [StringType](/specifications/formats/data-type.md) | Code of the [Source](/architecture/data-source.md)  |
+| plugin | [StringType](/specifications/formats/data-type.md) | Type of the [Plug-in](/architecture/plug-in.md)  |
+| url | [StringType](/specifications/formats/data-type.md) | HTTPS address of the [Plug-in](/architecture/plug-in.md)  |
+| authenticationData | [AuthenticationData](/specifications/formats/authentication.md) | Information required for the [Plug-in](/architecture/plug-in.md) to [authenticate](/specifications/formats/authentication.md) |
+| mapData | [MapData](/specifications/formats/map-data.md) | Information required to map data between [Connector](/architecture/connector.md) and [Plug-in](/architecture/plug-in.md) |
 
 
 It can also specify [Plug-in](/architecture/plug-in.md) specific sections. In the example below, DdApiConfigurationSection contains such information.
 
 ```json
 {
-    "SourceDefinition": {
-        "Id": 1,
-        "Name": "WIS",
-        "Code": "WIS",
-        "Plugin": "DD-APIV2",
-        "Url": "https://....",
-        "AuthenticationData": {
-            "AuthenticationType": 1,
-            "ApiKeyData": {
-                "ApiKey": "....",
-                "ApiKeyHeader": "Ocp-Apim-Subscription-Key"
+    "sourceDefinition": {
+        "name": "WIS",
+        "code": "WIS",
+        "plugin": "DD-APIV2",
+        "url": "https://....",
+        "authenticationData": {
+            "authenticationType": 1,
+            "apiKeyData": {
+                "key": "....",
+                "header": "Ocp-Apim-Subscription-Key"
             }
          },
-        "MapData": [
+        "mapData": [
             {
-                "CApiDataCategory": "Quantity",
-                "CApiName": "Q",
-                "SourceDataCategory": "Parameter",
-                "SourceName": "Q"
+                "cApiDataCategory": "Quantity",
+                "cApiName": "Q",
+                "sourceDataCategory": "Parameter",
+                "sourceName": "Q"
             },
             {
-                "CApiDataCategory": "Quantity",
-                "CApiName": "GELDHD",
-                "SourceDataCategory": "Parameter",
-                "SourceName": "EGV"
+                "cApiDataCategory": "Quantity",
+                "cApiName": "GELDHD",
+                "sourceDataCategory": "Parameter",
+                "sourceName": "EGV"
             },
             {
-                "CApiDataCategory": "Quantity",
-                "CApiName": "WATHTE",
-                "SourceDataCategory": "Parameter",
-                "SourceName": "WATHTE"
+                "cApiDataCategory": "Quantity",
+                "cApiName": "WATHTE",
+                "sourceDataCategory": "Parameter",
+                "sourceName": "WATHTE"
             },
             {
-                "CApiDataCategory": "Quantity",
-                "CApiName": "NEERSG",
-                "SourceDataCategory": "Parameter",
-                "SourceName": "NEERSG"
+                "cApiDataCategory": "Quantity",
+                "cApiName": "NEERSG",
+                "sourceDataCategory": "Parameter",
+                "sourceName": "NEERSG"
             },
             {
-                "CApiDataCategory": "Quantity",
-                "CApiName": "KRUINHTE",
-                "SourceDataCategory": "Parameter",
-                "SourceName": "KRUINHTE"
+                "cApiDataCategory": "Quantity",
+                "cApiName": "KRUINHTE",
+                "sourceDataCategory": "Parameter",
+                "sourceName": "KRUINHTE"
             }
         ],
-        "DdApiConfigurationSection": {
-            "PageSize": 100,
-            "SupportedQueryParameters": [
+        "ddApiConfigurationSection": {
+            "pageSize": 100,
+            "supportedQueryParameters": [
                 "locationCode"
             ]
         }

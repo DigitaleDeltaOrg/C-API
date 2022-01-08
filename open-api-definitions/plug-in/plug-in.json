@@ -1,0 +1,2129 @@
+
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "...",
+    "version": "v1"
+  },
+  "paths": {
+    "/v1/measurements": {
+      "post": {
+        "tags": [
+          "Request"
+        ],
+        "summary": "Retrieves a list of measurements that comply with the selection criteria.",
+        "requestBody": {
+          "description": "Composed data body containing information for connection, authentication and translation",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeasurementResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeasurementResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeasurementResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "501": {
+            "description": "Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/parameters": {
+      "post": {
+        "tags": [
+          "Request"
+        ],
+        "summary": "Retrieves a list of parameters known to the source service.",
+        "requestBody": {
+          "description": "Composed data body containing information for connection, authentication and translation",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SourceCodeName"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SourceCodeName"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SourceCodeName"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "501": {
+            "description": "Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/compartments": {
+      "post": {
+        "tags": [
+          "Request"
+        ],
+        "summary": "Retrieves a list of compartments known to the source service.",
+        "requestBody": {
+          "description": "Composed data body containing information for connection, authentication and translation",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SourceCodeName"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SourceCodeName"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SourceCodeName"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "501": {
+            "description": "Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/units": {
+      "post": {
+        "tags": [
+          "Request"
+        ],
+        "summary": "Retrieves a list of units known to the source service.",
+        "requestBody": {
+          "description": "Composed data body containing information for connection, authentication and translation",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SourceCodeName"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SourceCodeName"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SourceCodeName"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "501": {
+            "description": "Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/quantities": {
+      "post": {
+        "tags": [
+          "Request"
+        ],
+        "summary": "Retrieves a list of quantities known to the source service.",
+        "requestBody": {
+          "description": "Composed data body containing information for connection, authentication and translation",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SourceCodeName"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SourceCodeName"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SourceCodeName"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "501": {
+            "description": "Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/measurementobjects": {
+      "post": {
+        "tags": [
+          "Request"
+        ],
+        "summary": "Retrieves a list of measurement objects (locations) known to the source service.",
+        "requestBody": {
+          "description": "Composed data body containing information for connection, authentication and translation",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataBody"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MeasurementObject"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MeasurementObject"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MeasurementObject"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "501": {
+            "description": "Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ApiKeyData": {
+        "type": "object",
+        "properties": {
+          "apiKey": {
+            "type": "string",
+            "description": "API key passed to the source.",
+            "nullable": true
+          },
+          "apiKeyHeader": {
+            "type": "string",
+            "description": "The name of the header used to pass the API key.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Defines an Api Key."
+      },
+      "AuthenticationData": {
+        "type": "object",
+        "properties": {
+          "authenticationType": {
+            "$ref": "#/components/schemas/AuthenticationType"
+          },
+          "apiKeyData": {
+            "$ref": "#/components/schemas/ApiKeyData"
+          },
+          "oAuthDeviceTokenRequest": {
+            "$ref": "#/components/schemas/DeviceTokenRequest"
+          },
+          "oAuthClientCredentialsTokenRequest": {
+            "$ref": "#/components/schemas/ClientCredentialsTokenRequest"
+          },
+          "oAuthAuthorizationCodeTokenRequest": {
+            "$ref": "#/components/schemas/AuthorizationCodeTokenRequest"
+          },
+          "oAuthPasswordTokenRequest": {
+            "$ref": "#/components/schemas/PasswordTokenRequest"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Defines authentication data for none, API keys or OAuth2. For OAuth2 types see <a href=\"https://identitymodel.readthedocs.io/en/latest/client/overview.html\">https://identitymodel.readthedocs.io/en/latest/client/overview.html</a>."
+      },
+      "AuthenticationType": {
+        "enum": [
+          "None",
+          "ApiKey",
+          "OAuthPasswordTokenRequest",
+          "OAuthClientCredentialsTokenRequest",
+          "OAuthDeviceTokenRequest",
+          "OAuthAuthorizationTokenRequest"
+        ],
+        "type": "string",
+        "description": "Possible authentication types.</ul><li><i>0: No authentication. -> None</i></li><li><i>1: Use API keys. -> ApiKey</i></li><li><i>2: Use OAUTH2 password credentials. -> OAuthPasswordTokenRequest</i></li><li><i>3: Use OAUTH2 client credentials. -> OAuthClientCredentialsTokenRequest</i></li><li><i>4: Use OAUTH2 Device code. -> OAuthDeviceTokenRequest</i></li><li><i>5: Use OAUTH2 authorization code. -> OAuthAuthorizationTokenRequest</i></li></ul>"
+      },
+      "AuthorizationCodeTokenRequest": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "redirectUri": {
+            "type": "string",
+            "nullable": true
+          },
+          "resource": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "codeVerifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "grantType": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientId": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientSecret": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientAssertion": {
+            "$ref": "#/components/schemas/ClientAssertion"
+          },
+          "clientCredentialStyle": {
+            "$ref": "#/components/schemas/ClientCredentialStyle"
+          },
+          "authorizationHeaderStyle": {
+            "$ref": "#/components/schemas/BasicAuthenticationHeaderStyle"
+          },
+          "parameters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StringStringKeyValuePair"
+            },
+            "nullable": true
+          },
+          "version": {
+            "type": "string",
+            "nullable": true
+          },
+          "versionPolicy": {
+            "$ref": "#/components/schemas/HttpVersionPolicy"
+          },
+          "content": {
+            "$ref": "#/components/schemas/HttpContent"
+          },
+          "method": {
+            "$ref": "#/components/schemas/HttpMethod"
+          },
+          "requestUri": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "headers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StringStringIEnumerableKeyValuePair"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "properties": {
+            "type": "object",
+            "additionalProperties": {
+
+            },
+            "nullable": true,
+            "readOnly": true,
+            "deprecated": true
+          },
+          "options": {
+            "type": "object",
+            "additionalProperties": {
+
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicAuthenticationHeaderStyle": {
+        "enum": [
+          "Rfc6749",
+          "Rfc2617"
+        ],
+        "type": "string",
+        "description": "</ul></ul>"
+      },
+      "ClientAssertion": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClientCredentialsTokenRequest": {
+        "type": "object",
+        "properties": {
+          "scope": {
+            "type": "string",
+            "nullable": true
+          },
+          "resource": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "grantType": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientId": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientSecret": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientAssertion": {
+            "$ref": "#/components/schemas/ClientAssertion"
+          },
+          "clientCredentialStyle": {
+            "$ref": "#/components/schemas/ClientCredentialStyle"
+          },
+          "authorizationHeaderStyle": {
+            "$ref": "#/components/schemas/BasicAuthenticationHeaderStyle"
+          },
+          "parameters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StringStringKeyValuePair"
+            },
+            "nullable": true
+          },
+          "version": {
+            "type": "string",
+            "nullable": true
+          },
+          "versionPolicy": {
+            "$ref": "#/components/schemas/HttpVersionPolicy"
+          },
+          "content": {
+            "$ref": "#/components/schemas/HttpContent"
+          },
+          "method": {
+            "$ref": "#/components/schemas/HttpMethod"
+          },
+          "requestUri": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "headers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StringStringIEnumerableKeyValuePair"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "properties": {
+            "type": "object",
+            "additionalProperties": {
+
+            },
+            "nullable": true,
+            "readOnly": true,
+            "deprecated": true
+          },
+          "options": {
+            "type": "object",
+            "additionalProperties": {
+
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClientCredentialStyle": {
+        "enum": [
+          "AuthorizationHeader",
+          "PostBody"
+        ],
+        "type": "string",
+        "description": "</ul></ul>"
+      },
+      "CompareMethod": {
+        "enum": [
+          "Unknown",
+          "Eq",
+          "Ne",
+          "Lt",
+          "Le",
+          "Ge",
+          "Gt",
+          "In",
+          "Notin",
+          "Like",
+          "Startswith",
+          "Endswith",
+          "Wkt",
+          "GeoJson",
+          "Bbox"
+        ],
+        "type": "string",
+        "description": "Defines a compare method, which defines what type of comparison is to be used.</ul><li><i>0: Unknown - error. -> Unknown</i></li><li><i>1: Eq (equals) -> Eq</i></li><li><i>2: Ne (not equal) -> Ne</i></li><li><i>3: Lt (less than) -> Lt</i></li><li><i>4: Le (less than or equal to) -> Le</i></li><li><i>5:Ge (greater than of equal to) -> Ge</i></li><li><i>6: Gt (greater than) -> Gt</i></li><li><i>7: In (in list) -> In</i></li><li><i>8: Notin (not in list) -> Notin</i></li><li><i>9: Like -> Like</i></li><li><i>10: Starts with -> Startswith</i></li><li><i>11: Ends with -> Endswith</i></li><li><i>12: Wkt (WellKnownText) -> Wkt</i></li><li><i>13: GeoJson -> GeoJson</i></li><li><i>14: Bbox (bounding box) -> Bbox</i></li></ul>"
+      },
+      "Condition": {
+        "type": "object",
+        "properties": {
+          "fieldName": {
+            "type": "string",
+            "description": "Field name.",
+            "nullable": true,
+            "example": "quantity"
+          },
+          "compareMethod": {
+            "$ref": "#/components/schemas/CompareMethod"
+          },
+          "dataType": {
+            "$ref": "#/components/schemas/DataType"
+          },
+          "compareData": {
+            "description": "Data to compare with.",
+            "nullable": true,
+            "example": "Q"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ParserError"
+            },
+            "description": "Parser errors.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Defines a condition: a part of the filter that includes field name, operator and field value."
+      },
+      "ConnectorCapability": {
+        "type": "object",
+        "properties": {
+          "fieldName": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "dataCategory": {
+            "$ref": "#/components/schemas/DataCategory"
+          },
+          "queryType": {
+            "$ref": "#/components/schemas/QueryType"
+          },
+          "required": {
+            "type": "boolean",
+            "description": ""
+          }
+        },
+        "additionalProperties": false,
+        "description": "Defines the capability of the connector."
+      },
+      "DataBody": {
+        "type": "object",
+        "properties": {
+          "sourceDefinition": {
+            "$ref": "#/components/schemas/SourceDefinition"
+          },
+          "conditions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Condition"
+            },
+            "description": "Describes the query conditions.",
+            "nullable": true
+          },
+          "responseId": {
+            "type": "string",
+            "description": "Id provided by the connector, to keep track of the results.",
+            "format": "uuid"
+          },
+          "connectorCapabilities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ConnectorCapability"
+            },
+            "description": "Connector capabilities.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents data that needs to be passed to the plug-in. It describes information concerning the source, the query conditions and the Id provided by the connector."
+      },
+      "DataCategory": {
+        "enum": [
+          "Other",
+          "Quantity",
+          "Unit",
+          "Value",
+          "MeasurementObject",
+          "Parameter",
+          "MeasurementDate",
+          "Compartment"
+        ],
+        "type": "string",
+        "description": "Type of data.</ul><li><i>0: Other -> Other</i></li><li><i>1: Represents a quantity. -> Quantity</i></li><li><i>2: Represents a unit. -> Unit</i></li><li><i>3: Represents a measured value. -> Value</i></li><li><i>4: Represents a measurement object (location). -> MeasurementObject</i></li><li><i>5: Represents a parameter. -> Parameter</i></li><li><i>6: Represents a measurement data. -> MeasurementDate</i></li><li><i>7: Represents a compartment. -> Compartment</i></li></ul>"
+      },
+      "DataType": {
+        "enum": [
+          "Unsupported",
+          "StringType",
+          "NumericType",
+          "DateType",
+          "ArrayOfStringType",
+          "ArrayOfNumericType",
+          "BboxType",
+          "PolygonType",
+          "WktType"
+        ],
+        "type": "string",
+        "description": "Supported data types.</ul><li><i>0: Unsupported - Error -> Unsupported</i></li><li><i>1: String -> StringType</i></li><li><i>2: Number -> NumericType</i></li><li><i>3: Date -> DateType</i></li><li><i>4: string[] -> ArrayOfStringType</i></li><li><i>5: number[] -> ArrayOfNumericType</i></li><li><i>6: bbox (bounding box) -> BboxType</i></li><li><i>7: polygon -> PolygonType</i></li><li><i>8: wkt -> WktType</i></li></ul>"
+      },
+      "DdApiConfigurationSection": {
+        "type": "object",
+        "properties": {
+          "supportedQueryParameters": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Supported query parameters by the source.",
+            "nullable": true
+          },
+          "pageSize": {
+            "type": "integer",
+            "description": "Page size of the requests.",
+            "format": "int32",
+            "example": 100
+          }
+        },
+        "additionalProperties": false,
+        "description": "Specific configuration section for the DD-API plugins."
+      },
+      "DdEcoApiConfigurationSection": {
+        "type": "object",
+        "properties": {
+          "fieldDefinitions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FieldDefinition"
+            },
+            "description": "Field definitions, known to exist by the plug-in.",
+            "nullable": true
+          },
+          "pageSize": {
+            "type": "integer",
+            "description": "Page size of the requests.",
+            "format": "int32",
+            "example": 100
+          },
+          "useCapabilities": {
+            "type": "boolean",
+            "description": "Use the capabilities of the Source. Ignores FieldDefinitions if true."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Specific configuration section for the DD-ECO-API plugins."
+      },
+      "DeviceTokenRequest": {
+        "type": "object",
+        "properties": {
+          "deviceCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "grantType": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientId": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientSecret": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientAssertion": {
+            "$ref": "#/components/schemas/ClientAssertion"
+          },
+          "clientCredentialStyle": {
+            "$ref": "#/components/schemas/ClientCredentialStyle"
+          },
+          "authorizationHeaderStyle": {
+            "$ref": "#/components/schemas/BasicAuthenticationHeaderStyle"
+          },
+          "parameters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StringStringKeyValuePair"
+            },
+            "nullable": true
+          },
+          "version": {
+            "type": "string",
+            "nullable": true
+          },
+          "versionPolicy": {
+            "$ref": "#/components/schemas/HttpVersionPolicy"
+          },
+          "content": {
+            "$ref": "#/components/schemas/HttpContent"
+          },
+          "method": {
+            "$ref": "#/components/schemas/HttpMethod"
+          },
+          "requestUri": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "headers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StringStringIEnumerableKeyValuePair"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "properties": {
+            "type": "object",
+            "additionalProperties": {
+
+            },
+            "nullable": true,
+            "readOnly": true,
+            "deprecated": true
+          },
+          "options": {
+            "type": "object",
+            "additionalProperties": {
+
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EndPointFieldNameDescriptionName": {
+        "type": "object",
+        "properties": {
+          "endPoint": {
+            "type": "string",
+            "description": "Name of the endpoint (SPCID)",
+            "nullable": true
+          },
+          "fieldName": {
+            "type": "string",
+            "description": "Name of the field holding the code of the entity.",
+            "nullable": true
+          },
+          "descriptionName": {
+            "type": "string",
+            "description": "Name of the field holding the description (name) of the entity.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Describes a non-measurement endpoint in Z-Info to retrieve entities."
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "sourceErrors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SourceError"
+            },
+            "description": "Errors from the sources.",
+            "nullable": true
+          },
+          "requestError": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ParserError"
+            },
+            "description": "Errors from the request.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Error response."
+      },
+      "ErrorType": {
+        "enum": [
+          "UnknownField",
+          "UnknownCompareMethod",
+          "InvalidValue",
+          "InvalidBbox",
+          "InvalidSyntax",
+          "ArrayContainsDuplicates",
+          "ArrayIsEmpty",
+          "InvalidPolygon",
+          "InvalidWkt",
+          "InvalidDateType",
+          "Required",
+          "QuoteMismatch",
+          "BracketMismatch",
+          "FilterRequired",
+          "ArrayNotSpecified",
+          "NotQuoted"
+        ],
+        "type": "string",
+        "description": "Possible error types.</ul><li><i>1: Unknown field. -> UnknownField</i></li><li><i>2: Unknown compare method. -> UnknownCompareMethod</i></li><li><i>3: Invalid value. -> InvalidValue</i></li><li><i>4: Invalid bounding box. -> InvalidBbox</i></li><li><i>5: Invalid syntax. -> InvalidSyntax</i></li><li><i>6: Array contains duplicates -> ArrayContainsDuplicates</i></li><li><i>7: Array is empty. -> ArrayIsEmpty</i></li><li><i>8: Invalid polygon. -> InvalidPolygon</i></li><li><i>9: Invalid WellKnownText. -> InvalidWkt</i></li><li><i>10: Invalid data type. -> InvalidDateType</i></li><li><i>11: Required. -> Required</i></li><li><i>12: Quote mismatch. -> QuoteMismatch</i></li><li><i>13: Bracket mismatch. -> BracketMismatch</i></li><li><i>14: Filter is required. -> FilterRequired</i></li><li><i>15: Array is not specified. -> ArrayNotSpecified</i></li><li><i>16: Not quoted. -> NotQuoted</i></li></ul>"
+      },
+      "FieldDefinition": {
+        "type": "object",
+        "properties": {
+          "fieldName": {
+            "type": "string",
+            "description": "Field name.",
+            "nullable": true,
+            "example": "quantity"
+          },
+          "compareMethod": {
+            "$ref": "#/components/schemas/CompareMethod"
+          },
+          "dataType": {
+            "$ref": "#/components/schemas/DataType"
+          },
+          "required": {
+            "type": "boolean",
+            "description": "Required."
+          },
+          "description": {
+            "type": "string",
+            "description": "Description.",
+            "nullable": true
+          },
+          "dataCategory": {
+            "$ref": "#/components/schemas/DataCategory"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Defines a field definition."
+      },
+      "GeoJson": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/GeoJsonType"
+          },
+          "bbox": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "double"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GeoJsonType": {
+        "enum": [
+          "Point",
+          "MultiPoint",
+          "LineString",
+          "MultiLineString",
+          "Polygon",
+          "MultiPolygon",
+          "GeometryCollection",
+          "Feature",
+          "FeatureCollection"
+        ],
+        "type": "string",
+        "description": "</ul></ul>"
+      },
+      "Geometry": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Geometry type: Feature, Point, etc.",
+            "nullable": true
+          },
+          "coordinates": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "double"
+            },
+            "description": "List of ordinates",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": ""
+      },
+      "HttpContent": {
+        "type": "object",
+        "properties": {
+          "headers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StringStringIEnumerableKeyValuePair"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HttpMethod": {
+        "type": "object",
+        "properties": {
+          "method": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HttpVersionPolicy": {
+        "enum": [
+          "RequestVersionOrLower",
+          "RequestVersionOrHigher",
+          "RequestVersionExact"
+        ],
+        "type": "string",
+        "description": "</ul></ul>"
+      },
+      "InputParameterMapEntry": {
+        "type": "object",
+        "properties": {
+          "capiName": {
+            "type": "string",
+            "description": "Name of the C-API input parameter.",
+            "nullable": true
+          },
+          "dataCategory": {
+            "$ref": "#/components/schemas/DataCategory"
+          },
+          "dataType": {
+            "$ref": "#/components/schemas/DataType"
+          },
+          "zInfoName": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Z-Info name equivalents",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Maps input parameters (from C-API) to the Z-Info equivalents."
+      },
+      "Map": {
+        "type": "object",
+        "properties": {
+          "cApiDataCategory": {
+            "$ref": "#/components/schemas/DataCategory"
+          },
+          "capiName": {
+            "type": "string",
+            "description": "Name of property (from).",
+            "nullable": true
+          },
+          "sourceDataCategory": {
+            "$ref": "#/components/schemas/DataCategory"
+          },
+          "sourceName": {
+            "type": "string",
+            "description": "Name of property (to).",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Combination of DataCategory and its name."
+      },
+      "Measurement": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string",
+            "description": "Source, delivering the measurement.",
+            "nullable": true
+          },
+          "compartment": {
+            "type": "string",
+            "description": "Aquo compartment.",
+            "nullable": true
+          },
+          "parameter": {
+            "type": "string",
+            "description": "Aquo parameter.",
+            "nullable": true
+          },
+          "measurementDate": {
+            "type": "string",
+            "description": "When the measurement was performed.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "unit": {
+            "type": "string",
+            "description": "Unit",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "string",
+            "description": "Quantity",
+            "nullable": true
+          },
+          "value": {
+            "type": "number",
+            "description": "Measured value.",
+            "format": "double",
+            "nullable": true
+          },
+          "measurementObject": {
+            "type": "string",
+            "description": "Measurement object (location)",
+            "nullable": true
+          },
+          "coordinate": {
+            "$ref": "#/components/schemas/GeoJson"
+          },
+          "additionalData": {
+            "type": "object",
+            "additionalProperties": {
+
+            },
+            "description": "Additional data associated with the measurement as a dictionary of objects by string (key)t.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Describes a measurement."
+      },
+      "MeasurementObject": {
+        "type": "object",
+        "properties": {
+          "geometry": {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          "source": {
+            "type": "string",
+            "description": "Source",
+            "nullable": true
+          },
+          "code": {
+            "type": "string",
+            "description": "Code",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "Name",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Measurement object."
+      },
+      "MeasurementResponse": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "requestId": {
+            "type": "string",
+            "description": "",
+            "format": "uuid"
+          },
+          "measurements": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Measurement"
+            },
+            "description": "",
+            "nullable": true
+          },
+          "statistics": {
+            "$ref": "#/components/schemas/Statistics"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "",
+            "nullable": true
+          },
+          "httpStatus": {
+            "type": "integer",
+            "description": "",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": ""
+      },
+      "ParserError": {
+        "type": "object",
+        "properties": {
+          "errorType": {
+            "$ref": "#/components/schemas/ErrorType"
+          },
+          "errorText": {
+            "type": "string",
+            "description": "Error text.",
+            "nullable": true,
+            "readOnly": true
+          },
+          "context": {
+            "type": "string",
+            "description": "Error context.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "An error definition consists of an error and its context (statement)"
+      },
+      "PasswordTokenRequest": {
+        "type": "object",
+        "properties": {
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "scope": {
+            "type": "string",
+            "nullable": true
+          },
+          "resource": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "grantType": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientId": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientSecret": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientAssertion": {
+            "$ref": "#/components/schemas/ClientAssertion"
+          },
+          "clientCredentialStyle": {
+            "$ref": "#/components/schemas/ClientCredentialStyle"
+          },
+          "authorizationHeaderStyle": {
+            "$ref": "#/components/schemas/BasicAuthenticationHeaderStyle"
+          },
+          "parameters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StringStringKeyValuePair"
+            },
+            "nullable": true
+          },
+          "version": {
+            "type": "string",
+            "nullable": true
+          },
+          "versionPolicy": {
+            "$ref": "#/components/schemas/HttpVersionPolicy"
+          },
+          "content": {
+            "$ref": "#/components/schemas/HttpContent"
+          },
+          "method": {
+            "$ref": "#/components/schemas/HttpMethod"
+          },
+          "requestUri": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "headers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StringStringIEnumerableKeyValuePair"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "properties": {
+            "type": "object",
+            "additionalProperties": {
+
+            },
+            "nullable": true,
+            "readOnly": true,
+            "deprecated": true
+          },
+          "options": {
+            "type": "object",
+            "additionalProperties": {
+
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "QueryType": {
+        "enum": [
+          "StringExact",
+          "StringWildCard",
+          "Numeric",
+          "Date",
+          "Geo"
+        ],
+        "type": "string",
+        "description": "Query type determines what comparisons are allowed.</ul><li><i>Exact string, meaning eq, ne, in and notin -> StringExact</i></li><li><i>Wildcard, meaning StringExact plus startswith, endswith and like. -> StringWildCard</i></li><li><i>eq, ne, lt, gt, le, ge -> Numeric</i></li><li><i>eq, ne, lt, gt, le, ge -> Date</i></li><li><i>StringExact plus bbox, wkt and geojson -> Geo</i></li></ul>"
+      },
+      "SourceCodeName": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string",
+            "description": "Source",
+            "nullable": true
+          },
+          "code": {
+            "type": "string",
+            "description": "Code",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "Name",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": ""
+      },
+      "SourceDefinition": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the source.",
+            "nullable": true
+          },
+          "code": {
+            "type": "string",
+            "description": "Code of the source.",
+            "nullable": true
+          },
+          "plugin": {
+            "type": "string",
+            "description": "Code of the plugin.",
+            "nullable": true
+          },
+          "url": {
+            "type": "string",
+            "description": "The URL where the DD-API implementation lives.",
+            "nullable": true
+          },
+          "authenticationData": {
+            "$ref": "#/components/schemas/AuthenticationData"
+          },
+          "statistics": {
+            "$ref": "#/components/schemas/Statistics"
+          },
+          "mapData": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Map"
+            },
+            "description": "Maps properties to corrected Aquo equivalents",
+            "nullable": true
+          },
+          "supportedQueryParameters": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Supported query parameters by the source.",
+            "nullable": true
+          },
+          "zInfoConfigurationSection": {
+            "$ref": "#/components/schemas/ZInfoConfigurationSection"
+          },
+          "ddEcoApiConfigurationSection": {
+            "$ref": "#/components/schemas/DdEcoApiConfigurationSection"
+          },
+          "ddApiConfigurationSection": {
+            "$ref": "#/components/schemas/DdApiConfigurationSection"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Defines a Source, a configuration item that describes how to communicate with a plug-in."
+      },
+      "SourceError": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string",
+            "description": "Source giving the error.",
+            "nullable": true
+          },
+          "error": {
+            "$ref": "#/components/schemas/SourceErrorType"
+          }
+        },
+        "additionalProperties": false,
+        "description": ""
+      },
+      "SourceErrorType": {
+        "enum": [
+          "Unknown",
+          "Duplicate",
+          "Missing"
+        ],
+        "type": "string",
+        "description": "Source error types.</ul><li><i>1: Unknown -> Unknown</i></li><li><i>2: Duplicate -> Duplicate</i></li><li><i>3: Missing -> Missing</i></li></ul>"
+      },
+      "Statistics": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string",
+            "description": "Code of the source.",
+            "nullable": true
+          },
+          "responseTimeInMilliSeconds": {
+            "type": "integer",
+            "description": "Total response time in seconds.",
+            "format": "int64"
+          },
+          "totalByteCount": {
+            "type": "integer",
+            "description": "Total number of bytes retrieved.",
+            "format": "int64"
+          },
+          "numberOfRequests": {
+            "type": "integer",
+            "description": "Total number of requests.",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Describes statistics of a source."
+      },
+      "StringStringIEnumerableKeyValuePair": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StringStringKeyValuePair": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ZInfoConfigurationSection": {
+        "type": "object",
+        "properties": {
+          "zInfoRequiredQueryParameters": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of required query parameters in the Z-Info request. Default these have a * value.",
+            "nullable": true
+          },
+          "startDateParameter": {
+            "type": "string",
+            "description": "Name of the parameter specifying the start date.",
+            "nullable": true
+          },
+          "endDateParameter": {
+            "type": "string",
+            "description": "Name of the parameter specifying the end date.",
+            "nullable": true
+          },
+          "inputParameterMap": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InputParameterMapEntry"
+            },
+            "description": "Map of parameters that are requites for the request.",
+            "nullable": true
+          },
+          "compartmentRequest": {
+            "$ref": "#/components/schemas/EndPointFieldNameDescriptionName"
+          },
+          "parameterRequest": {
+            "$ref": "#/components/schemas/EndPointFieldNameDescriptionName"
+          },
+          "unitRequest": {
+            "$ref": "#/components/schemas/EndPointFieldNameDescriptionName"
+          },
+          "quantityRequest": {
+            "$ref": "#/components/schemas/EndPointFieldNameDescriptionName"
+          },
+          "measurementObjectRequest": {
+            "$ref": "#/components/schemas/EndPointFieldNameDescriptionName"
+          },
+          "measurementRequest": {
+            "type": "string",
+            "description": "Endpoint information for the measurements request.",
+            "nullable": true
+          },
+          "measurementObjectNameConstructorFormat": {
+            "type": "string",
+            "description": "Z-INFO has categories for a location: the name of the location is insufficient. This formatter combines it into a single element.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Specific configuration section for the Z-Info plugins."
+      }
+    }
+  }
+}

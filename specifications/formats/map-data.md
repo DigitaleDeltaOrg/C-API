@@ -7,10 +7,10 @@ A map data element consists of four fields:
 ## Properties
 | Name               | Type                                               | Remarks                                                                                                                       |
 |--------------------|----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| CApiDataCategory   | [StringType](/specifications/formats/data-type.md) | Name of the [data category](/specifications/formats/data-category.md) as known by the [Connector](/architecture/connector.md) | 
-| CApiName           | [StringType](/specifications/formats/data-type.md) | Value as  known by the [Connector](/architecture/connector.md)                                                                |  
-| SourceDataCategory | [StringType](/specifications/formats/data-type.md) | Name of the [data category](/specifications/formats/data-category.md) as known by the [Plug-in](/architecture/plug-in.md)     | 
-| SourceName         | [StringType](/specifications/formats/data-type.md) | Value as known by the [Plug-in](/architecture/plug-in.md)                                                                     |
+| cApiDataCategory   | [StringType](/specifications/formats/data-type.md) | Name of the [data category](/specifications/formats/data-category.md) as known by the [Connector](/architecture/connector.md) | 
+| cApiName           | [StringType](/specifications/formats/data-type.md) | Value as  known by the [Connector](/architecture/connector.md)                                                                |  
+| sourceDataCategory | [StringType](/specifications/formats/data-type.md) | Name of the [data category](/specifications/formats/data-category.md) as known by the [Plug-in](/architecture/plug-in.md)     | 
+| sourceName         | [StringType](/specifications/formats/data-type.md) | Value as known by the [Plug-in](/architecture/plug-in.md)                                                                     |
 
 
 The combination CApiDataCategory+CApiName must be mapped to SourceDataCategory+SourceName and vice versa.
@@ -20,34 +20,34 @@ Unknown combinations are left untouched (unmapped).
 {
   "MapData": [
     {
-      "CApiDataCategory": "Quantity",
-      "CApiName": "Q",
-      "SourceDataCategory": "Parameter",
-      "SourceName": "Q"
+      "cApiDataCategory": "Quantity",
+      "cApiName": "Q",
+      "sourceDataCategory": "Parameter",
+      "sourceName": "Q"
     },
     {
-      "CApiDataCategory": "Quantity",
-      "CApiName": "GELDHD",
-      "SourceDataCategory": "Parameter",
-      "SourceName": "EGV"
+      "cApiDataCategory": "Quantity",
+      "cApiName": "GELDHD",
+      "sourceDataCategory": "Parameter",
+      "sourceName": "EGV"
     },
     {
-      "CApiDataCategory": "Quantity",
-      "CApiName": "WATHTE",
-      "SourceDataCategory": "Parameter",
-      "SourceName": "WATHTE"
+      "cApiDataCategory": "Quantity",
+      "cApiName": "WATHTE",
+      "sourceDataCategory": "Parameter",
+      "sourceName": "WATHTE"
     },
     {
-      "CApiDataCategory": "Quantity",
-      "CApiName": "NEERSG",
-      "SourceDataCategory": "Parameter",
-      "SourceName": "NEERSG"
+      "cApiDataCategory": "Quantity",
+      "cApiName": "NEERSG",
+      "sourceDataCategory": "Parameter",
+      "sourceName": "NEERSG"
     },
     {
-      "CApiDataCategory": "Quantity",
-      "CApiName": "KRUINHTE",
-      "SourceDataCategory": "Parameter",
-      "SourceName": "KRUINHTE"
+      "cApiDataCategory": "Quantity",
+      "cApiName": "KRUINHTE",
+      "sourceDataCategory": "Parameter",
+      "sourceName": "KRUINHTE"
     }
   ]
 }

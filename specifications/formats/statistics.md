@@ -9,10 +9,10 @@ It is defined as:
 ## Properties
 | Name                       | Type                                                           | Remarks                                                                                   |
 |----------------------------|----------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| Source                     | [StringType](/specifications/formats/data-type.md)             | Code of the source as passed by the [connector](/architecture/connector.md)               |
-| ResponseTimeInMilliseconds | [NumericType](/specifications/formats/data-type.md#data-types) | total time in milliseconds that the plug-in had to wait for response from the data source |
-| TotalByteCount             | [NumericType](/specifications/formats/data-type.md#data-types) | total number of bytes that the plug-in received from the data source                      |
-| NumberOfRequests           | [NumericType](/specifications/formats/data-type.md#data-types) | number of request the plug-in send to the data source                                     |
+| source                     | [StringType](/specifications/formats/data-type.md)             | Code of the source as passed by the [connector](/architecture/connector.md)               |
+| responseTimeInMilliseconds | [NumericType](/specifications/formats/data-type.md#data-types) | total time in milliseconds that the plug-in had to wait for response from the data source |
+| totalByteCount             | [NumericType](/specifications/formats/data-type.md#data-types) | total number of bytes that the plug-in received from the data source                      |
+| numberOfRequests           | [NumericType](/specifications/formats/data-type.md#data-types) | number of request the plug-in send to the data source                                     |
 
 The implementation of this structure is recommended.
 

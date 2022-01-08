@@ -15,9 +15,9 @@ All properties are [StringType](/specifications/formats/data-type.md#data-types)
 ## API-keys
 ```json
 { 
-  "AuthenticationData": {
-    "AuthenticationType": "ApiKey",
-    "ApiKey": {
+  "authenticationData": {
+    "authenticationType": "ApiKey",
+    "apiKey": {
       "Key": "",
       "Header": ""
     }
@@ -28,14 +28,14 @@ All properties are [StringType](/specifications/formats/data-type.md#data-types)
 ## OAUTH2 device flow
 ```json
 {
-  "AuthenticationData": {
-    "AuthenticationType": "OAuthDeviceTokenRequest",
-    "OAuthDeviceTokenRequest": {
-      "Address": "",
-      "DeviceCode": "",
-      "GrantType": "",
-      "ClientId": "",
-      "ClientSecret": ""
+  "authenticationData": {
+    "authenticationType": "OAuthDeviceTokenRequest",
+    "oAuthDeviceTokenRequest": {
+      "address": "",
+      "deviceCode": "",
+      "grantType": "",
+      "clientId": "",
+      "clientSecret": ""
     }
   }
 }
@@ -44,14 +44,14 @@ All properties are [StringType](/specifications/formats/data-type.md#data-types)
 ## OAUTH2 client credentials flow
 ```json
 { 
-  "AuthenticationData": {
-    "AuthenticationType": "OAuthClientCredentialsTokenRequest",
-    "OAuthClientCredentialsTokenRequest": {
-      "Address": "",
-      "GrantType": "",
-      "ClientId": "",
-      "ClientSecret": "",
-      "Scope": ""
+  "authenticationData": {
+    "authenticationType": "OAuthClientCredentialsTokenRequest",
+    "oAuthClientCredentialsTokenRequest": {
+      "address": "",
+      "grantType": "",
+      "clientId": "",
+      "clientSecret": "",
+      "scope": "",
     }
   }
 }
@@ -60,15 +60,15 @@ All properties are [StringType](/specifications/formats/data-type.md#data-types)
 ## OAUTH2 password flow
 ```json
 { 
-  "AuthenticationData": {
-    "AuthenticationType": "OAuthPasswordTokenRequest",
-    "OAuthPasswordTokenRequest": {
-      "Address": "",
-      "GrantType": "",
-      "ClientId": "",
-      "ClientSecret": "",
-      "Scope": "",
-      "UserName": ""
+  "authenticationData": {
+    "authenticationType": "OAuthPasswordTokenRequest",
+    "oAuthPasswordTokenRequest": {
+      "address": "",
+      "grantType": "",
+      "clientId": "",
+      "clientSecret": "",
+      "scope": "",
+      "userName": ""
     }
   }
 }
@@ -77,15 +77,15 @@ All properties are [StringType](/specifications/formats/data-type.md#data-types)
 ## OAUTH2 authorization flow
 ```json
 { 
-  "AuthenticationData": {
-    "AuthenticationType": "OAuthAuthorizationCodeTokenRequest",
-    "OAuthAuthorizationCodeTokenRequest": {
-      "Address": "",
-      "GrantType": "",
-      "ClientId": "",
-      "ClientSecret": "",
-      "Scope": "",
-      "RedirectUri": ""
+  "authenticationData": {
+    "authenticationType": "OAuthAuthorizationCodeTokenRequest",
+    "oAuthAuthorizationCodeTokenRequest": {
+      "address": "",
+      "grantType": "",
+      "clientId": "",
+      "clientSecret": "",
+      "scope": "",
+      "redirectUri": ""
     }
   }
 }

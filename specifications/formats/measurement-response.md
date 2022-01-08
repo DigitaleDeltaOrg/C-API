@@ -5,22 +5,22 @@ MeasurementResponse is sent back to the [Connector](/architecture/connector.md) 
 ## Properties
 | Name        | Type                                                           | Remarks                                                                                            |
 |-------------|----------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| Source      | [StringType](/specifications/formats/data-type.md)             | Code of the source as passed by the [Connector](/architecture/connector.md)                        |
-| RequestId   | [StringType](/specifications/formats/data-type.md)             | Id of the request, as passed by the [Connector](/architecture/connector.md)                        |
-| Measurement | Array of [Measurement](/specifications/formats/measurement.md) | Array of measurements, retrieved and processed by the [Plug-in](/architecture/plug-in.md)          |
-| Statistics  | [Statistics](/specifications/formats/statistics.md)            | Statistics information from the plug-in. Recommended.                                              |
-| Errors      | [Error](/specifications/formats/error-type.md)                 | Represents the problems that the Plug-in](/architecture/plug-in.md) encountered during the request |
-| HttpStatus  | [NumericType](/specifications/formats/data-type.md)            | HttpStatus representing the status of the [Plug-in](/architecture/plug-in.md) after processing.    |
+| source      | [StringType](/specifications/formats/data-type.md)             | Code of the source as passed by the [Connector](/architecture/connector.md)                        |
+| requestId   | [StringType](/specifications/formats/data-type.md)             | Id of the request, as passed by the [Connector](/architecture/connector.md)                        |
+| measurement | Array of [Measurement](/specifications/formats/measurement.md) | Array of measurements, retrieved and processed by the [Plug-in](/architecture/plug-in.md)          |
+| statistics  | [Statistics](/specifications/formats/statistics.md)            | Statistics information from the plug-in. Recommended.                                              |
+| errors      | [Error](/specifications/formats/error-type.md)                 | Represents the problems that the Plug-in](/architecture/plug-in.md) encountered during the request |
+| httpStatus  | [NumericType](/specifications/formats/data-type.md)            | HttpStatus representing the status of the [Plug-in](/architecture/plug-in.md) after processing.    |
 
 
 ```json
 {
-  "Source": "",
-  "RequestId": "",
-  "Measurements": {},
-  "Statistics": {},
-  "Errors": {},
-  "HttpStatus": 200
+  "source": "",
+  "requestId": "",
+  "measurements": {},
+  "statistics": {},
+  "errors": {},
+  "httpStatus": 200
 }
 ```
 

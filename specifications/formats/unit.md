@@ -12,6 +12,6 @@ These derived or combined units are officially referred to as derived units, whi
 ## Properties
 | Name   | Type                                               | Remarks                                                                       |
 |--------|----------------------------------------------------|-------------------------------------------------------------------------------|
-| Code   | [StringType](/specifications/formats/data-type.md) | Code of the unit                                                              |
-| Name   | [StringType](/specifications/formats/data-type.md) | Name (or description) of the unit                                             |
-| Source | [StringType](/specifications/formats/data-type.md) | Code of the source as provided by the [Connector](/architecture/connector.md) |
+| code   | [StringType](/specifications/formats/data-type.md) | Code of the unit                                                              |
+| name   | [StringType](/specifications/formats/data-type.md) | Name (or description) of the unit                                             |
+| source | [StringType](/specifications/formats/data-type.md) | Code of the source as provided by the [Connector](/architecture/connector.md) |
