@@ -14,14 +14,14 @@ However, it is advised to share the specifications in a catalogue.
 It conveys configuration information to a [Plug-in](/architecture/plug-in.md). 
 
 ## Properties
-| Name | Type                                               | Remarks                                                                       |
-|--|----------------------------------------------------|-------------------------------------------------------------------------------|)                                               |
-| name | [StringType](/specifications/formats/data-type.md) | Name of the [Source](/architecture/data-source.md)                                |
-| code | [StringType](/specifications/formats/data-type.md) | Code of the [Source](/architecture/data-source.md)  |
-| plugin | [StringType](/specifications/formats/data-type.md) | Type of the [Plug-in](/architecture/plug-in.md)  |
-| url | [StringType](/specifications/formats/data-type.md) | HTTPS address of the [Plug-in](/architecture/plug-in.md)  |
+| Name               | Type                                                            | Remarks                                                                                                                       |
+|--------------------|-----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| name               | [StringType](/specifications/formats/data-type.md)              | Name of the [Source](/architecture/data-source.md)                                                                            | 
+| code               | [StringType](/specifications/formats/data-type.md)              | Code of the [Source](/architecture/data-source.md)                                                                            |
+| plugin             | [StringType](/specifications/formats/data-type.md)              | Type of the [Plug-in](/architecture/plug-in.md)                                                                               |
+| url                | [StringType](/specifications/formats/data-type.md)              | HTTPS address of the [Plug-in](/architecture/plug-in.md)                                                                      |
 | authenticationData | [AuthenticationData](/specifications/formats/authentication.md) | Information required for the [Plug-in](/architecture/plug-in.md) to [authenticate](/specifications/formats/authentication.md) |
-| mapData | [MapData](/specifications/formats/map-data.md) | Information required to map data between [Connector](/architecture/connector.md) and [Plug-in](/architecture/plug-in.md) |
+| mapData            | [MapData](/specifications/formats/map-data.md)                  | Information required to map data between [Connector](/architecture/connector.md) and [Plug-in](/architecture/plug-in.md)      |
 
 
 It can also specify [Plug-in](/architecture/plug-in.md) specific sections. In the example below, DdApiConfigurationSection contains such information.

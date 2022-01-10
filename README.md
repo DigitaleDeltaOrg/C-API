@@ -15,5 +15,5 @@ This document is divided in several sections, to make it easier to navigate to t
 - [Community](/general/community.md)
 - [Catalogue](/catalogue/catalogue.md)
 - [Project members](/general/project-members.md)
-- [Contributors](/general/contributors)
+- [Contributors](/general/contributors.md)
 
