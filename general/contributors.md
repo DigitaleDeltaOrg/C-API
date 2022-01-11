@@ -6,4 +6,4 @@
 
 [Hoogheemraadschap Hollands Noorderkwartier](https://www.hhnk.nl) provides ecological and chemical data of their organisation through DD-ECO-API.
 
-[Informatiehuis Water](https://www.ihw.nl) is willingness to govern this project.
+[Informatiehuis Water](https://www.ihw.nl) is willing to govern this project.
