@@ -11,7 +11,7 @@ These parts are separated by a colon. Conditions are separated by a semicolon.
 Examples:
 
 ```html
-?filter=fieldname1:eq:'test';fieldname2:in:['test1', 'test2'];fieldname3:gt:123
+?request=fieldname1:eq:'test';fieldname2:in:['test1', 'test2'];fieldname3:gt:123
 ```
 
 The standard compare methods can be found [here](/specifications/formats/compare-method.md).
