@@ -8,4 +8,3 @@ It is configured to retrieve data from:
 - the ecological data from Hoogheemraadschap van Delfland provided by Aquon.
 - the ecological and chemical data from Hoogheemraadschap Hollands Noorderkwartier,
 - the Z-INFO data from Hoogheemraadschap van Delfland.
-- 
